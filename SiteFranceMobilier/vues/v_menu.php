@@ -23,6 +23,18 @@
 				}
 				?>       
             </select>
+            
+            <!-- Gamme -->
+            <label for="gamme" class="form-label">Gamme</label>
+            <select name="gamme" id="gamme" class="form-select">
+                <option selected value="0">Toutes les gammes</option>
+				<?php
+				foreach ($this->data['lesGammes'] as $uneGamme)
+				{
+					echo '<option value="'.$uneGamme->GetId().'">'.$uneGamme->GetLibelle().'</option>';
+				}
+				?>       
+            </select>
         </div>
 
 		<input type="hidden" name="page" value="listePdt" />		

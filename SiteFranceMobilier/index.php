@@ -17,7 +17,7 @@
 		case "listePdt":
 			require_once "controleurs/c_consulterProduits.php";
 			$controleur=new c_consulterProduits();
-			$controleur->action_listeProduits($_GET['categ']);
+			$controleur->action_listeProduits($_GET['categ'], $_GET['gamme']);
 			break;
 		default:
 			require_once "controleurs/c_consulterProduits.php";
